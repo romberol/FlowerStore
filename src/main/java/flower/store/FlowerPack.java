@@ -7,11 +7,11 @@ public class FlowerPack {
     private Flower flower;
     private int quantity;
 
-    FlowerPack(Flower flower, int quantity){ 
+    FlowerPack(Flower flower, int quantity) {
         this.flower = flower;
         this.quantity = quantity;
     }
-    public double getPrice(){ 
+    public double getPrice() {
         return this.flower.getPrice() * this.quantity;
     }
 }
