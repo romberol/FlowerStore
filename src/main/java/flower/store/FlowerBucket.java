@@ -1,12 +1,11 @@
 package flower.store;
 
 import lombok.Getter;
-import lombok.Setter;
 
 import java.util.ArrayList;
 public class FlowerBucket {
     @Getter
-    double price = 0;
+    private double price = 0;
     @Getter
     private ArrayList<FlowerPack> packs;
 

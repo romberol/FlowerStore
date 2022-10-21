@@ -3,7 +3,7 @@ package flower.store;
 import java.util.ArrayList;
 
 public class FLowerStore {
-    ArrayList<FlowerBucket> buckets;
+    private ArrayList<FlowerBucket>  buckets;
 
     FLowerStore(){
         this.buckets = new ArrayList<>();
@@ -13,14 +13,18 @@ public class FLowerStore {
         this.buckets.add(bucket);
     }
 
-    public FlowerBucket search(FlowerType fl_type){
+    public ArrayList<FlowerBucket> search(FlowerType flType){
+        ArrayList<FlowerBucket> foundBuckets = new ArrayList<>();
         for (FlowerBucket fl_bucket: this.buckets){
             for (FlowerPack pack: fl_bucket.getPacks()){
-                if (pack.getFlower().getFlowerType() == fl_type){
-                    return fl_bucket;
+                if (pack.getFlower().getFlowerType() == flType){
+                    foundBuckets.add(fl_bucket);
                 }
             }
         }
-        return null;
+        if(foundBuckets.isEmpty()){
+            return null;
+        }
+        return foundBuckets;
     }
 }
