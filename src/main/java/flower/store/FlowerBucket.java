@@ -9,10 +9,10 @@ public class FlowerBucket {
     @Getter
     private ArrayList<FlowerPack> packs;
 
-    FlowerBucket(){ 
+    FlowerBucket() {
         this.packs = new ArrayList<>();
     }
-    public void add(FlowerPack pack){ 
+    public void add(FlowerPack pack) {
         this.price += pack.getPrice();
         this.packs.add(pack);
     }
