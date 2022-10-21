@@ -13,8 +13,7 @@ public class Flower {
     @Getter
     private double price;
     @Getter
-    private FlowerType flowerType;
-
+    private FlowerType flowerType = FlowerType.TULIP; //by Default
     public String getColor() {
         return color.toString();
     }
