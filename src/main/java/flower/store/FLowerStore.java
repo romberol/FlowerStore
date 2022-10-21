@@ -5,24 +5,24 @@ import java.util.ArrayList;
 public class FLowerStore {
     private ArrayList<FlowerBucket>  buckets;
 
-    FLowerStore(){
+    FLowerStore(){ 
         this.buckets = new ArrayList<>();
     }
 
-    public void add(FlowerBucket bucket){
+    public void add(FlowerBucket bucket){ 
         this.buckets.add(bucket);
     }
 
-    public ArrayList<FlowerBucket> search(FlowerType flType){
+    public ArrayList<FlowerBucket> search(FlowerType flType){ 
         ArrayList<FlowerBucket> foundBuckets = new ArrayList<>();
-        for (FlowerBucket fl_bucket: this.buckets){
-            for (FlowerPack pack: fl_bucket.getPacks()){
-                if (pack.getFlower().getFlowerType() == flType){
-                    foundBuckets.add(fl_bucket);
+        for (FlowerBucket flBucket: this.buckets){ 
+            for (FlowerPack pack: flBucket.getPacks()){ 
+                if (pack.getFlower().getFlowerType() == flType){ 
+                    foundBuckets.add(flBucket);
                 }
             }
         }
-        if(foundBuckets.isEmpty()){
+        if (foundBuckets.isEmpty()){ 
             return null;
         }
         return foundBuckets;
